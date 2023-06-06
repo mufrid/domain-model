@@ -1,16 +1,16 @@
 ﻿module MembershipTypes
 
-type MineAbonnement = Medlemsblad | Nyhetsbrev
+type MySubscriptions = Magazine | Newsletter
 
-type PersonligInformasjon = PersonligInformasjon of string
-type Brukernavn = Brukernavn of string
-type Passord = Passord of string
-type Sikkerhet = { Brukernavn : Brukernavn; Passord : Passord }
-type MinProfil = { PersonligInfo : PersonligInformasjon; Sikkerhetspreferanser : Sikkerhet }
+type PersonalInformation = PersonalInformation of string
+type UserName = UserName of string
+type Password = Password of string
+type Security = { UserName : UserName; Password : Password }
+type MyProfile = { PersonalInformation : PersonalInformation; SecurityPreferences : Security }
 
-type Faktura = Betalt | Ubetalt
-type Betaling = Bank | AvtaleGiro
-type Medlem = { Faktura : Faktura; Betaling : Betaling; MineAbonnement : MineAbonnement; MinProfil : MinProfil }
+type Invoice = Paid | Pending
+type PaymentChannels = CreditCard | PayPal
+type Member = { Invoice : Invoice; Payment : PaymentChannels; MySubscriptions : MySubscriptions; MyProfile : MyProfile }
 
 
 
