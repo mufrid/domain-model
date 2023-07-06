@@ -10,8 +10,15 @@ type MyProfile = { PersonalInformation : PersonalInformation; SecurityPreference
 
 type Invoice = Paid | Pending
 type PaymentChannels = CreditCard | PayPal
-type Member = { Invoice : Invoice; Payment : PaymentChannels; MySubscriptions : MySubscriptions; MyProfile : MyProfile }
 
+type Member = { 
+    Invoice : Invoice; 
+    Payment : PaymentChannels; 
+    MySubscriptions : MySubscriptions; 
+    MyProfile : MyProfile 
+    }
+
+type MemberSubscription = MemberSubscription of MySubscriptions
 
 
 
