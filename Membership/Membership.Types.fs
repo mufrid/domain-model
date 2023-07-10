@@ -18,7 +18,8 @@ type Member = {
     MyProfile : MyProfile 
     }
 
-type MemberSubscription = MemberSubscription of MySubscriptions
+type PublishingFrequency = Monthly | Weekly 
+type MemberSubscription = { Subscription : MySubscriptions; ReceivingSubscriptionFrequency : PublishingFrequency }
 
 
 
