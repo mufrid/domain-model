@@ -7,8 +7,9 @@ open Xunit
 [<Fact>]
 let ``Member subscribes to magazine`` () =
     let magazineSubscription = Magazine
+    let expected = MemberSubscription Magazine
     
-    let memberSubscription = Subscribe magazineSubscription 
+    let actual = Subscribe magazineSubscription 
     
-    Assert.Equal<MySubscriptions>(Magazine, memberSubscription)
+    Assert.Equal<MemberSubscription>(expected, actual)
 

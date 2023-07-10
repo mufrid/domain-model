@@ -3,6 +3,6 @@ module MembershipFunctions
 open MembershipTypes
 
 let Subscribe (subscription : MySubscriptions) =
-    let memberSubscription = subscription
+    let memberSubscription = MemberSubscription subscription
     memberSubscription
 
